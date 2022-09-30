@@ -37,16 +37,6 @@ const Book = () => {
   ];
 
   return (
-  // <><div>
-  //   {books.map(book => (
-  //     <div key={book.id}>
-  //       <p>Book title: {book.title}</p>
-  //       <p>Book author: {book.author}</p>
-  //       <button>Remove</button>
-  //     </div>
-  //   ))}
-  // </div><AddNewBook /></>
-
     <>
       <BookContainer books={books} />
       <AddNewBook />

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { any, object } from 'prop-types';
 import PropTypes from 'prop-types';
 import BookDetails from './BookDetails';
 
