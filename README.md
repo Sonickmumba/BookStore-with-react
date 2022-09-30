@@ -48,7 +48,6 @@ $ git clone git@github.com:Sonickmumba/bookstore-with-react.git
 
 ```
 $ npm install
-
 ```
 ```
 $ npm start
