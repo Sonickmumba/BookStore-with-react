@@ -44,16 +44,22 @@ $ git clone git@github.com:Sonickmumba/bookstore-with-react.git
 ```
 
 - Once finished you should see a new folder called **Bookstore** in your current directory.
+- cd into the folder and run the following commands:
+
+```
+$ npm install
+
+```
+```
+$ npm start
+```
+
 - Start customizing the project so it fits your personal preferences and needs.
 - Enjoy your new professional **Bookstore Web** application!
 
 ### Run tests
 
 To check for linters, use the files provided by [Microverse](https://github.com/microverseinc/linters-config). A GitHub action is also set to run during pull request.
-
-```
-$ npm install
-```
 
 ### Deployment
 
