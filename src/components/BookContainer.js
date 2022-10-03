@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-typos */
 import React from 'react';
-import PropTypes from 'prop-types';
 import BookDetails from './BookDetails';
 
 const BookContainer = (props) => {
@@ -15,7 +16,4 @@ const BookContainer = (props) => {
   );
 };
 
-BookContainer.propTypes = {
-  books: PropTypes.node.isRequired,
-};
 export default BookContainer;
