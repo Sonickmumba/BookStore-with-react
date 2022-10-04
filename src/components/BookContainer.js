@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import BookDetails from './BookDetails';
 
-const BookContainer = (props) => {
-  const { books } = props;
+const BookContainer = () => {
+  const books = useSelector((state) => state.book);
   return (
     <div>
       {books.map((book) => (
@@ -13,10 +13,6 @@ const BookContainer = (props) => {
       ))}
     </div>
   );
-};
-
-BookContainer.propTypes = {
-  books: PropTypes.node.isRequired,
 };
 
 export default BookContainer;
