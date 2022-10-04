@@ -1,3 +1,5 @@
+const ADD = 'BOOKSTORE/books/ADD';
+const DELETE = 'BOOKSTORE/books/DELETE';
 // INITIAL STATE
 
 export const initialState = [];
@@ -6,9 +8,9 @@ export const initialState = [];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD':
+    case ADD:
       return [...state, action.book];
-    case 'DELETE':
+    case DELETE:
       return state.filter((book) => book.id !== action.id);
     default:
       return state;
@@ -19,7 +21,7 @@ const bookReducer = (state = initialState, action) => {
 
 export const addBook = (book) => (
   {
-    type: 'ADD',
+    type: ADD,
     book,
   }
 );
@@ -28,7 +30,7 @@ export const addBook = (book) => (
 
 export const deleteBook = (id) => (
   {
-    type: 'DELETE',
+    type: DELETE,
     id,
   }
 );

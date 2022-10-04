@@ -1,14 +1,18 @@
 // Action Type
+const STATUS = 'BOOKSTORE/categories/STATUS';
+const REMOVE_CATEGORY = 'BOOKSTORE/categories/REMOVE_CATEGORY';
+const ADD_CATEGORY = 'BOOKSTORE/categories/ADD_CATEGORY';
+
 // Reducer Function
 
 const checkStatus = (state = false, action) => {
   switch (action.type) {
-    case 'STATUS':
+    case STATUS:
       return !state;
     case 'ADD_CATEGORY':
       return [...state, action.book];
 
-    case 'REMOVE_CATEGORY':
+    case REMOVE_CATEGORY:
       return state.filter((book) => book !== action.id);
 
     default:
@@ -18,15 +22,15 @@ const checkStatus = (state = false, action) => {
 
 // Add A Book Category action
 
-export const addBook = (book) => ({
-  type: 'ADD_CATEGORY',
+export const addBookCategory = (book) => ({
+  type: ADD_CATEGORY,
   book,
 });
 
 // Remove a book Category action
 
-export const deleteBook = (id) => ({
-  type: 'REMOVE_CATEGORY',
+export const deleteBookCategory = (id) => ({
+  type: REMOVE_CATEGORY,
   id,
 });
 
