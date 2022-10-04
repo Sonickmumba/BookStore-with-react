@@ -9,11 +9,11 @@ const checkStatus = (state = false, action) => {
   switch (action.type) {
     case STATUS:
       return !state;
-    case 'ADD_CATEGORY':
-      return [...state, action.book];
+    case ADD_CATEGORY:
+      return [...state, action.payload];
 
     case REMOVE_CATEGORY:
-      return state.filter((book) => book !== action.id);
+      return state.filter((book) => book !== action.payload);
 
     default:
       return state;
@@ -24,14 +24,14 @@ const checkStatus = (state = false, action) => {
 
 export const addBookCategory = (book) => ({
   type: ADD_CATEGORY,
-  book,
+  payload: book,
 });
 
 // Remove a book Category action
 
 export const deleteBookCategory = (id) => ({
   type: REMOVE_CATEGORY,
-  id,
+  payload: id,
 });
 
 export default checkStatus;
