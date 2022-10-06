@@ -1,14 +1,17 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteBook } from '../redux/books/books';
+import { deleteBookFromApi } from '../redux/books/books';
 
 const BookDetails = ({ book }) => {
-  const { id, title, author } = book;
+  const {
+    // eslint-disable-next-line camelcase
+    item_id, title, author, category,
+  } = book;
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(deleteBook(id));
+    dispatch(deleteBookFromApi(item_id));
   };
   return (
     <>
@@ -20,6 +23,10 @@ const BookDetails = ({ book }) => {
         Book author:
         {author}
       </p>
+      <p>
+        Book author:
+        {category}
+      </p>
       <button type="button" onClick={handleClick}>Remove</button>
     </>
   );
@@ -27,9 +34,10 @@ const BookDetails = ({ book }) => {
 
 BookDetails.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
