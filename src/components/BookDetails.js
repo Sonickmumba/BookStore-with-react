@@ -24,7 +24,7 @@ const BookDetails = ({ book }) => {
         {author}
       </p>
       <p>
-        Book author:
+        Category:
         {category}
       </p>
       <button type="button" onClick={handleClick}>Remove</button>
