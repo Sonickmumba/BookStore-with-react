@@ -11,13 +11,15 @@ const BookContainer = () => {
     dispatch(getBooksFromApi());
   }, [dispatch]);
   return (
-    <div>
-      {books.map((book) => (
-        <div key={book.item_id}>
-          <BookDetails book={book} />
-        </div>
-      ))}
-    </div>
+    <>
+      <main>
+        {books.map((book) => (
+          <div key={book.item_id} className="bookstore-container">
+            <BookDetails book={book} />
+          </div>
+        ))}
+      </main>
+    </>
   );
 };
 
